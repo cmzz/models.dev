@@ -2,7 +2,23 @@
 # https://openrouter.ai/docs/api/api-reference/embeddings/submit-an-embedding-request
 schema = 2
 v2_only = true
-base_model = "voyageai/voyage-4"
+type = "embedding"
+name = "voyage-4"
+description = "Text embedding model"
+open_weights = false
+release_date = "2026-07-27"
+
+[modalities]
+input = ["text"]
+output = ["embedding"]
+
+[capabilities]
+tools = { supported = false }
+reasoning = { supported = false }
+
+[limit]
+context = 32_000
+output = 0
 
 [api.embeddings]
 base_url = "https://openrouter.ai/api/v1"
